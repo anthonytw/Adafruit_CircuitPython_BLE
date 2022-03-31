@@ -31,12 +31,12 @@ class UARTService(Service):
     _server_tx = StreamOut(
         uuid=VendorUUID("6E400003-B5A3-F393-E0A9-E50E24DCCA9E"),
         timeout=1.0,
-        buffer_size=64,
+        buffer_size=1024,
     )
     _server_rx = StreamIn(
         uuid=VendorUUID("6E400002-B5A3-F393-E0A9-E50E24DCCA9E"),
         timeout=1.0,
-        buffer_size=64,
+        buffer_size=1024,
     )
 
     def __init__(self, service=None):
